@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+#game {
+  display: grid;
+  grid-template-columns: repeat(8, 40px);
+  grid-template-rows: repeat(8, 40px);
+  gap: 2px;
+  margin: 0 auto;
+  width: 336px; /* 8 * 40px + 7 * 2px gap */
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  background-color: #ddd;
+  border: 1px solid #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cell.revealed {
+  background-color: #eee;
+  cursor: default;
+}
+
+.cell.mine {
+  background-color: #e57373;
+}
